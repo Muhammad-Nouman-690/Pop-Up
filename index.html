@@ -98,11 +98,13 @@
 
 
   <script>
-    $(document).ready(function(){
-      $("li").click(function(){
-        $(this).hide();
+      $("#epic").change(function () {
+        $("#epic-price").html("Sub total: " + $(this).val());
       });
-    });
+
+      $("#can").change(function () {
+        $("#can-price").html("Sub total: " + $(this).val())
+      })
     </script>
 
 
