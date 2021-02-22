@@ -163,7 +163,7 @@
         var value = parseInt($('#epic').children('option:selected').val())
         var result = quantity * value;
         result +=200;
-        if (isNaN(number)) number = 0; 
+        result = result ? result : 0; 
         $("#can-price").html("Order total: " + result)        
       })
     </script>
