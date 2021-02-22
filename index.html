@@ -41,8 +41,8 @@
                       <div class="form-row">
                         <div class="col">
                           <select id="inputState" class="form-control">
-                            <option selected>Quantity</option>
-                            <option> 6 can Pack </option>
+                            <option id='s-pack' selected>Quantity</option>
+                            <option > 6 can Pack </option>
                             <option> 12 can Pack </option>
                           </select>
                         </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col">
                       <ul>
-                        <li>
+                        <li id="p-six">
                           Sub total: 750
                         </li>
                         <li>
@@ -99,7 +99,7 @@
 
   <script>
     $(document).ready(function(){
-      $("li").click(function(){
+      $("#s-pack").change(function(){
         $(this).hide();
       });
     });
