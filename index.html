@@ -60,20 +60,6 @@
                           placeholder="First Name"
                         />
                       </div>
-<<<<<<< HEAD
-                      <br>
-                      <div class="form-row">
-                        <div class="col">
-                          <select id="inputState" class="form-control">
-                            <option id='s-pack' selected>Quantity</option>
-                            <option > 6 can Pack </option>
-                            <option> 12 can Pack </option>
-                          </select>
-                        </div>
-                        <div class="col">
-                          <input type="email" class="form-control" placeholder="Email">
-                        </div>
-=======
                       <div class="col">
                         <input
                           type="text"
@@ -102,17 +88,16 @@
                     <br>
                     <div class="form-row">
                       <div class="col">
-                        <select id="epic" class="form-control">
+                        <select id="epic" class="form-control total-calculator">
                           <option selected>Select Your Pack</option>
                           <option value="750">6 can Pack</option>
                           <option value="1400">12 can Pack</option>
                         </select>
->>>>>>> f9966ed3917805b6436a1e3316d56c702e48ca39
                       </div>
                       <div class="col">
-                        <select id="can" class="form-control">
+                        <select id="can" class="form-control total-calculator">
                           <option selected>Quantity</option>
-                          <option value="750">1</option>
+                          <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                         </select>
@@ -148,17 +133,8 @@
                     </div>
                     <div class="col">
                       <ul>
-<<<<<<< HEAD
-                        <li id="p-six">
-                          Sub total: 750
-                        </li>
-                        <li>
-                          Order total: 000
-                        </li>
-=======
                         <li id="epic-price">Sub total:</li>
                         <li id="can-price">Order total:</li>
->>>>>>> f9966ed3917805b6436a1e3316d56c702e48ca39
                       </ul>
                     </div>
                   </div>
@@ -175,20 +151,19 @@
       </div>
     </div>
 
-<<<<<<< HEAD
-  <script>
-    $(document).ready(function(){
-      $("#s-pack").change(function(){
-        $(this).hide();
-=======
     <script>
       $("#epic").change(function () {
         $("#epic-price").html("Sub total: " + $(this).val());
->>>>>>> f9966ed3917805b6436a1e3316d56c702e48ca39
       });
-
-      $("#can").change(function () {
-        $("#can-price").html("Sub total: " + $(this).val())
+      
+      $(".total-calculator").change(function () {
+        var quantity = parseInt($('#can').val());
+        var value = parseInt($('#epic').children('option:selected').val())
+        var result = quantity * value;
+        result +=200;
+       
+        $("#can-price").html("Order total: " + result)
+        
       })
     </script>
 
